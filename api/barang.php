@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
 <?php
 require 'koneksi.php';
 session_start();
@@ -13,6 +9,10 @@ $barang = getData('SELECT * , nama_kategori FROM barang inner join kategori on k
 // var_dump($barang);
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+
 
 <head>
     <meta charset="UTF-8">

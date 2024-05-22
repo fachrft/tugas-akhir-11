@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 session_start();
 require 'koneksi.php';
@@ -19,6 +16,9 @@ $query = mysqli_query($conn, "SELECT sum(total_harga) AS grand_total FROM sub_tr
 $getsum = mysqli_fetch_assoc($query);
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
 
 <head>
     <meta charset="UTF-8">

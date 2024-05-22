@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 session_start();
 require 'koneksi.php';
@@ -51,6 +48,8 @@ if (isset($_POST['transaksi'])) {
 }
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">

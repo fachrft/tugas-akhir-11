@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 session_start();
 require 'koneksi.php';
@@ -12,7 +9,8 @@ if (!isset($_SESSION['kasir'])) {
 $transaksi = getData("SELECT * FROM transaksi");
 
 
-?>
+?><!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">

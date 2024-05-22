@@ -1,3 +1,14 @@
+<?php
+require 'koneksi.php';
+
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $role = $_POST['role'];
+    login($username, $password, $role);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,17 +28,6 @@
     </style>
 </head>
 
-<?php
-require 'koneksi.php';
-
-if (isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $role = $_POST['role'];
-    login($username, $password, $role);
-}
-
-?>
 
 <body>
     <div class="text-center mt-4">

@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("brrdgjokzyge4vxghosm-mysql.services.clever-cloud.com", "uwytcerkmuanavy0", "W88X2w3V9psK1hBlXKun", "brrdgjokzyge4vxghosm", 3306, );
+$conn = mysqli_connect("brrdgjokzyge4vxghosm-mysql.services.clever-cloud.com", "uwytcerkmuanavy0", "W88X2w3V9psK1hBlXKun", "brrdgjokzyge4vxghosm", 3306 );
 
 function login($username, $password, $role)
 {

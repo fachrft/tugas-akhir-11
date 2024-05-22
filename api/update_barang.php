@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
-    <style>
-        /* CSS tambahan untuk form di tengah */
-        .center-form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-        }
-    </style>
-</head>
-
 <?php
 session_start();
 require 'koneksi.php';
@@ -43,6 +24,25 @@ if(isset($_POST['submit'])) {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        /* CSS tambahan untuk form di tengah */
+        .center-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+    </style>
+</head>
+
 
 <body>
     <div class="text-center mt-4">

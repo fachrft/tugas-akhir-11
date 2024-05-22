@@ -1,3 +1,27 @@
+<?php
+session_start();
+require 'koneksi.php';
+
+if (!isset($_SESSION['admin'])) {
+    header('Location: login.php');
+}
+
+$kat_barang = getData("SELECT * FROM kategori order by id_kategori desc");
+
+
+if (isset($_POST['submit'])) {
+    if (tambahKategori($_POST) > 0) {
+        echo "<script>
+        alert('Katgeori berhasil ditambahkan');
+        window.location.href = 'kategori_barang.php';
+        </script>";
+    } else {
+        echo "<script>
+        alert('Katgeori gagal ditambahkan');
+        </script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,31 +52,6 @@
     }
 </style>
 
-<?php
-session_start();
-require 'koneksi.php';
-
-if (!isset($_SESSION['admin'])) {
-    header('Location: login.php');
-}
-
-$kat_barang = getData("SELECT * FROM kategori order by id_kategori desc");
-
-
-if (isset($_POST['submit'])) {
-    if (tambahKategori($_POST) > 0) {
-        echo "<script>
-        alert('Katgeori berhasil ditambahkan');
-        window.location.href = 'kategori_barang.php';
-        </script>";
-    } else {
-        echo "<script>
-        alert('Katgeori gagal ditambahkan');
-        </script>";
-    }
-}
-
-?>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

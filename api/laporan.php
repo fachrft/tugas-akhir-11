@@ -1,3 +1,28 @@
+<?php
+session_start();
+require 'koneksi.php';
+
+if (!isset($_SESSION['admin'])) {
+    header('Location: login.php');
+}
+
+$laporan = getData("SELECT transaksi.id_transaksi,transaksi.tgl_transaksi,transaksi.no_invoice,transaksi.total_bayar,transaksi.nama_pembeli,user.username FROM transaksi INNER JOIN user ON transaksi.kode_kasir=user.id ORDER BY transaksi.id_transaksi DESC");
+
+
+if (isset($_POST['submit'])) {
+    if (tambahKategori($_POST) > 0) {
+        echo "<script>
+        alert('Katgeori berhasil ditambahkan');
+        window.location.href = 'kategori_barang.php';
+        </script>";
+    } else {
+        echo "<script>
+        alert('Katgeori gagal ditambahkan');
+        </script>";
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,32 +52,6 @@
         /* Warna garis bawah saat hover */
     }
 </style>
-
-<?php
-session_start();
-require 'koneksi.php';
-
-if (!isset($_SESSION['admin'])) {
-    header('Location: login.php');
-}
-
-$laporan = getData("SELECT transaksi.id_transaksi,transaksi.tgl_transaksi,transaksi.no_invoice,transaksi.total_bayar,transaksi.nama_pembeli,user.username FROM transaksi INNER JOIN user ON transaksi.kode_kasir=user.id ORDER BY transaksi.id_transaksi DESC");
-
-
-if (isset($_POST['submit'])) {
-    if (tambahKategori($_POST) > 0) {
-        echo "<script>
-        alert('Katgeori berhasil ditambahkan');
-        window.location.href = 'kategori_barang.php';
-        </script>";
-    } else {
-        echo "<script>
-        alert('Katgeori gagal ditambahkan');
-        </script>";
-    }
-}
-
-?>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
