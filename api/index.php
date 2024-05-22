@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 session_start();
 require 'koneksi.php';
@@ -17,6 +14,8 @@ $cetak_barang = mysqli_num_rows($barang);
 $cetak_laporan = mysqli_num_rows($laporan);
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
